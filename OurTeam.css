@@ -1,0 +1,462 @@
+@font-face {
+    font-family: monty;
+    src: url(./Assets/Fonts/Montserrat-Medium.ttf);
+}
+
+@font-face {
+    font-family: cinzel;
+    src: url(/Assets/Fonts/cinzel.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: monty;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 1vw;
+    background: #012d6c;
+    height: 10vh;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #def2f1;
+    border-radius: 4px;
+    -webkit-transition-duration: 0.4s;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border: 6px dashed #012d6c;
+    /* Safari */
+    overflow: scroll;
+    overflow: overlay;
+    transition-duration: 0.4s;
+}
+
+body::-webkit-scrollbar-track {
+    background: #012d6c;
+}
+
+
+/* ------------- NAV BAR ------------- */
+
+#nav-body {
+    background-color: #012d6c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1%;
+    height: 5vw;
+}
+
+#logo-body {
+    display: flex;
+    height: 100%;
+    width: 50%;
+    align-items: center;
+    justify-content: left;
+}
+
+#sf-logo {
+    background-image: url(./Assets/Images/SFlogo.png);
+    width: 20%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#sf-name {
+    font-size: 32px;
+    color: white;
+    font-family: cinzel, sans-serif;
+    font-weight: 900;
+    position: relative;
+    left: -5%;
+}
+
+#btn-body {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+}
+
+.nav-btn {
+    color: white;
+    background-color: #012d6c;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 2%;
+    margin-right: 10%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.nav-btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 6px;
+    transition: ease-in-out;
+    transition-duration: 400ms;
+    scale: 101.5%;
+}
+
+
+/* ------------- HERO PAGE ------------- */
+
+#hero-body {
+    width: 100vw;
+    height: 62vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero-img {
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#hero-text {
+    color: white;
+    position: absolute;
+    font-size: 64px;
+}
+
+
+/* ------------- OFFICE BEARERS ------------- */
+
+#OB-MAIN-TITLE {
+    text-align: center;
+    padding-top: 10%;
+    font-size: 72px;
+    color: #012d6c;
+    font-weight: 900;
+    font-family: cinzel, sans-serif;
+}
+
+#office-bearers-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    flex-direction: column;
+}
+
+
+/* Chairman */
+
+.ob-body-lg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 70vw;
+    padding: 5%;
+}
+
+.ob-box-lg {
+    height: 90%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid #def2f1;
+    border-radius: 0 16px 16px 0;
+}
+
+.ob-title-lg {
+    color: #def2f1;
+    padding: 5%;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.ob-title-lg hr {
+    height: 2px;
+    border-width: 0;
+    background-color: #def2f1;
+}
+
+.ob-name-lg {
+    color: #def2f1;
+    font-size: 32px;
+    text-align: center;
+    font-weight: 400;
+    padding-top: 5%;
+}
+
+.ob-acad-lg {
+    color: #def2f1;
+}
+
+.ob-img-lg {
+    height: 100%;
+    width: 60%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 16px 0 0 16px;
+}
+
+.ob-details-lg {
+    height: 100%;
+    width: 40%;
+    background-color: #012d6c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0 16px 16px 0;
+    text-align: center;
+}
+
+.ob-quote-lg {
+    font-weight: 900;
+    padding: 5%;
+    text-align: center;
+    color: #def2f1;
+    margin-top: 15%;
+}
+
+.ob-quote-lg::before {
+    content: '🙶 ';
+    font-size: 48px;
+    position: relative;
+    top: 15%;
+}
+
+
+/* Other OB */
+
+.ob-cont-md {
+    height: 90vh;
+    width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 5vw;
+    padding: 5%;
+}
+
+.ob-body-md {
+    border-radius: 8px;
+    padding: 8% 4%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-color: #def2f1;
+    overflow-y: hidden;
+}
+
+.ob-img-md {
+    height: 70%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: border-box;
+    background-position-y: 50%;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+    top: -5%;
+}
+
+.ob-details-md {
+    height: 30%;
+    color: #012d6c;
+    background-color: #def2f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 8px 8px;
+    border: 10px double #012d6c;
+    overflow-y: hidden;
+    text-align: center;
+}
+
+.ob-title-md {
+    font-size: 28px;
+    padding: 3%;
+    font-weight: 800;
+    overflow-y: inherit;
+}
+
+.ob-title-md hr {
+    height: 1px;
+    border: none;
+    background-color: #012d6c;
+    overflow-y: inherit;
+}
+
+.ob-name-md {
+    font-size: 24px;
+    font-weight: 550;
+    overflow-y: inherit;
+}
+
+.ob-acad-md {
+    overflow-y: inherit;
+}
+
+.ob-quote-md {
+    padding: 2%;
+    font-weight: 900;
+    overflow-y: inherit;
+    text-align: center;
+}
+
+#single-ob-md {
+    width: 50vw;
+    height: 100vh;
+}
+
+.section-title {
+    text-align: center;
+    padding-top: 10%;
+    font-size: 64px;
+    color: #012d6c;
+    font-weight: 900;
+    font-family: cinzel, sans-serif;
+}
+
+
+/* FOOTER */
+
+#footer {
+    height: 10vh;
+    width: 100vw;
+    background-color: brown;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ------------- RESPONSIVE ------------- */
+
+@media (max-width: 576px) {
+    #nav-body {
+        height: 15vw;
+    }
+    .nav-btn {
+        font-size: 8px;
+    }
+    #sf-name {
+        font-size: 16px;
+        margin-left: 1%;
+        left: 0;
+    }
+    #hero-text {
+        font-size: 32px;
+    }
+    /* Large Cards */
+    .ob-body-lg {
+        width: 90vw;
+        flex-direction: column;
+    }
+    .ob-img-lg {
+        width: 100%;
+        height: 60%;
+        border-radius: 16px 16px 0 0;
+    }
+    .ob-details-lg {
+        width: 100%;
+        height: 40%;
+        border-radius: 0 0 16px 16px;
+    }
+    .ob-box-lg {
+        border-radius: 0 0 16px 16px;
+    }
+    .ob-title-lg {
+        font-size: 36px;
+    }
+    .ob-name-lg {
+        font-size: 16px;
+    }
+    .ob-quote-lg {
+        margin-top: 0;
+        font-size: 12px;
+        font-weight: 900;
+        text-align: center;
+        color: #def2f1;
+    }
+    .ob-quote-lg::before {
+        content: '🙶 ';
+        font-size: 12px;
+        top: 0;
+    }
+    /* Medium Cards */
+    .ob-cont-md {
+        height: 160vh;
+        padding-bottom: 0%;
+        gap: 5vh;
+    }
+    .ob-img-md {
+        image-resolution: 80%;
+        height: 60%;
+    }
+    .ob-details-md {
+        height: 40%;
+    }
+    .ob-quote-md {
+        font-size: 24px;
+    }
+    #single-ob-md {
+        width: 90vw;
+        height: 100vh;
+    }
+    #OB-MAIN-TITLE {
+        font-size: 48px;
+    }
+    .section-title {
+        font-size: 32px;
+    }
+}
+
+@media (min-width:576px) and (max-width: 1024px) {
+    #nav-body {
+        height: 10vw;
+    }
+    #sf-name {
+        font-size: 16px;
+        margin-left: 1%;
+        left: 0;
+    }
+    .nav-btn {
+        margin-right: 15%;
+    }
+    .ob-body-lg {
+        width: 80vw;
+        flex-direction: column;
+    }
+    .ob-img-lg {
+        width: 100%;
+        height: 60%;
+        border-radius: 16px 16px 0 0;
+    }
+    .ob-details-lg {
+        width: 100%;
+        height: 40%;
+        border-radius: 0 0 16px 16px;
+    }
+    .ob-box-lg {
+        border-radius: 0 0 16px 16px;
+    }
+    .ob-quote-lg {
+        margin-top: 0;
+        font-size: 24px;
+        font-weight: 900;
+        text-align: center;
+        color: #def2f1;
+    }
+    .ob-quote-lg::before {
+        content: '🙶 ';
+        font-size: 24px;
+        top: 0;
+    }
+    #OB-MAIN-TITLE {
+        font-size: 64px;
+    }
+    .section-title {
+        font-size: 32px;
+    }
+}
